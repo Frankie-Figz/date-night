@@ -1,17 +1,6 @@
 var db = require("../models");
 var mysql = require("mysql");
 
-var connection = mysql.createConnection({
-    host: "localhost",
-    // Your port; if not 3306
-    port: 3306,
-    // Your username
-    user: "root",
-    // Your password
-    password: "root1234",
-    database: "datenight_db"
-});
-
 module.exports = function(app){
 // LOGIN RUTES
 app.get("/api/login/:username",function(req,res){
@@ -93,21 +82,34 @@ app.get("/api/surveyanswers/:userId", function(req,res){
         res.json(data);
     });
 });
+
 // Route for getting matching algorithm
-app.get("/api/matches/:userId", function(req,res){
+app.get("/api/matches/:userId", function(req,res){    
+    var connection = mysql.createConnection({
+        host: "localhost",
+        // Your port; if not 3306
+        port: 3306,
+        // Your username
+        user: "root",
+        // Your password
+        password: "root",
+        database: "datenight_db"
+    });
             
     connection.connect(function(err) {
-        if (err) throw err;
-      });
-      var query = "SELECT target_name, SUM(question_difference) as metric " +
-      "FROM magic " +
-      "WHERE source_user = ? AND target_user <> ? " +
-      "GROUP BY target_name " +
-      "ORDER BY metric " +
-      "LIMIT 1";
-      connection.query(query, [req.params.userId, req.params.userId], function(err, result) {
-          console.log(result);
-          res.json(result);        
+        // if (err) throw err;
+
+        var query = "SELECT target_name, SUM(question_difference) as metric " +
+        "FROM magic " +
+        "WHERE source_user = ? AND target_user <> ? " +
+        "GROUP BY target_name " +
+        "ORDER BY metric " +
+        "LIMIT 1";
+        connection.query(query, [req.params.userId, req.params.userId], function(err, result) {
+            console.log(result);
+            res.json(result);        
+        });
+        connection.end();
       });
 });
 
