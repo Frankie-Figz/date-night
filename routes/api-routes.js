@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
     // Your username
     user: "root",
     // Your password
-    password: "root",
+    password: "root1234",
     database: "datenight_db"
 });
 
