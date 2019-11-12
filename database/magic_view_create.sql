@@ -8,9 +8,9 @@ SELECT u.id as source_user,
 CONCAT(u.first_name," ",u.last_name) as source_name, 
 y.UserId as target_user, 
 CONCAT(w.first_name," ",w.last_name) as target_name, 
-abs(x.answers - y.answers) as question_difference
--- w.img_link
--- w.description
+abs(x.answers - y.answers) as question_difference,
+w.img_url as img_url,
+w.bio as bio
 -- w.gender
 -- w.gender_preference
 
