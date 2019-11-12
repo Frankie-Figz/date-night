@@ -16,7 +16,6 @@ $(document).ready(function(){
                 console.log(answerVal);
                 singleQuestionAnswer(result[key].id,answerVal);
             };
-
         })
         .done(function(){
             window.location.replace("/matches");

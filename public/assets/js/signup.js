@@ -26,6 +26,11 @@ $(document).ready(function(){
         var passwordInput = $("#password").val().trim();
         var passwordCheckInput = $("#confirm-password").val().trim();
         var dateOfBirth = $("#date-of-birth").val().trim();
+        var imgLinkInput = $("#picture").val().trim();
+        var bioDescriptionInput = $("#description").val().trim();
+        var genderInput = $("#gender").val().trim();
+        var genderPreferenceInput = $("#preference").val().trim();
+
         if(passwordValid(passwordInput,passwordCheckInput)){
                 var usernameEntered = $("#user-name").val().trim();
                 console.log("I am here at the password valid field !");
@@ -36,7 +41,11 @@ $(document).ready(function(){
                     firstName: firstNameInput,
                     lastName: lastNameInput,
                     password: passwordInput,
-                    dateOfBirth: dateOfBirth};
+                    dateOfBirth: dateOfBirth,
+                    imgLink: imgLinkInput,
+                    gender: genderInput,
+                    genderPreference: genderPreferenceInput,
+                    bio: bioDescriptionInput};
                     // Console logs the current user object for sanity checking
                     console.log("I am user-name");
                     console.log(user);

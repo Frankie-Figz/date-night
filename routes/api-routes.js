@@ -1,6 +1,5 @@
 var db = require("../models");
 var mysql = require("mysql");
-
 module.exports = function(app){
 // LOGIN RUTES
 app.get("/api/login/:username",function(req,res){
@@ -45,7 +44,11 @@ app.post("/api/user", function(req, res){
             first_name: req.body.firstName,
             last_name: req.body.lastName,
             password: req.body.password,
-            birthday: req.body.dateOfBirth
+            birthday: req.body.dateOfBirth,
+            gender: req.body.gender,
+            gender_preference: req.body.genderPreference,
+            bio: req.body.bio,
+            img_url: req.body.imgLink
     }).then(function(data){
         res.json(data);
     }).catch(function(err){
@@ -92,7 +95,7 @@ app.get("/api/matches/:userId", function(req,res){
         // Your username
         user: "root",
         // Your password
-        password: "root1234",
+        password: "root",
         database: "datenight_db"
     });
             
