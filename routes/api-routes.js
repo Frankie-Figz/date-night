@@ -92,25 +92,25 @@ app.get("/api/matches/:userId", function(req,res){
         // Your username
         user: "root",
         // Your password
-        password: "gwcoding",
+        password: "root1234",
         database: "datenight_db"
     });
             
     connection.connect(function(err) {
         // if (err) throw err;
-
+        // img_link, description; 
         var query = "SELECT target_name, SUM(question_difference) as metric " +
         "FROM magic " +
         "WHERE source_user = ? AND target_user <> ? " +
         "GROUP BY target_name " +
         "ORDER BY metric " +
-        "LIMIT 1";
+        "LIMIT 3";
         connection.query(query, [req.params.userId, req.params.userId], function(err, result) {
             console.log(result);
             res.json(result);        
         });
         connection.end();
-      });
+        });
 });
 
 };
