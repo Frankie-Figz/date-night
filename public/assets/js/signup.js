@@ -15,7 +15,6 @@ $(document).ready(function(){
                 // console.log(result);
                 window.location.href="/";
             });
-
     };
     //Handles the sign-up validation
     function handleSignUp(){

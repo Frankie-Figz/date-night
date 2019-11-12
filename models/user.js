@@ -42,10 +42,8 @@ module.exports = function(sequelize, DataType){
             type: DataType.TEXT
         }
     });
-
     User.associate = function(models){
         User.hasMany(models.Survey_Answers);
     };
-
     return User;
 };

@@ -18,14 +18,7 @@ CHANGE COLUMN `updatedAt` `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAM
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'FJVR','F','V','123','1987-05-20 00:00:00','2019-11-07 22:52:28','2019-11-07 22:52:28'),
-(2,'rnulanz','Richard','Nulanz','password','1990-01-01 00:00:00','2019-11-08 14:08:25','2019-11-08 14:08:25'),
-(3,'elee','Eugene','Lee','password','1996-01-01 00:00:00','2019-11-08 14:08:25','2019-11-08 14:08:25'),
-(4,'afomia','Afomia','K','password','1996-01-01 00:00:00','2019-11-08 14:08:25','2019-11-08 14:08:25'),
-(5,'estotz','Emma','Stotz','password','1996-01-01 00:00:00','2019-11-08 14:08:25','2019-11-08 14:08:25'),
-(6,'nhenry','Nolan','Henry','password','1996-01-01 00:00:00','2019-11-08 14:08:25','2019-11-08 14:08:25'),
-(7,'ehoversten','Erik','Hoversten','password','1996-01-01 00:00:00','2019-11-08 14:08:25','2019-11-08 14:08:25'),
-(22,'fjvannini@gmail.com','F','V','123','1987-05-20 00:00:00','2019-11-08 07:42:00','2019-11-08 07:42:00');
+INSERT INTO `users` VALUES (1,'galmes','Gary','Almes','123','1918-01-01 00:00:00','Male','Female','https://i.imgur.com/HMsCSCG.jpg','Hello I\'m Gary and I like to party','2019-11-12 19:20:08','2019-11-12 19:20:08'),(2,'rnulanz','Richard','Nulanz','123','1990-01-01 00:00:00','Male','Female','https://i.imgur.com/u2oXUXg.png','Hello I\'m Richard and I like to party','2019-11-12 19:21:58','2019-11-12 19:21:58'),(3,'elee','Eugene','Lee','123','1996-01-01 00:00:00','Male','Female','https://i.imgur.com/R8q81Jj.jpg','Hello I\'m Eugene and I like to party','2019-11-12 19:22:55','2019-11-12 19:22:55'),(4,'afomia','Afomia','Kassaye','123','1991-01-01 00:00:00','Female','Male','https://i.imgur.com/AoIrWgR.png','Hello I\'m Afomia and I like to party','2019-11-12 19:24:07','2019-11-12 19:24:07'),(5,'estotz','Emma','Stotz','123','1996-01-01 00:00:00','Female','Male','https://i.imgur.com/8fGG6AJ.jpg','Hello I\'m Emma and I like to study','2019-11-12 19:25:06','2019-11-12 19:25:06'),(6,'nhenry','Nolan','Henry','123','1996-01-01 00:00:00','Male','Female','https://i.imgur.com/G6q5ji9.png','Hello I\'m Nolan and I like to party','2019-11-12 19:25:51','2019-11-12 19:25:51'),(7,'ehoversten','Erik','Hoversten','123','1996-01-01 00:00:00','Male','Female','https://i.imgur.com/2oOGq5N.png','Hello I\'m Erik and I like to party','2019-11-12 19:26:43','2019-11-12 19:26:43'),(8,'fvannini','Frank','Vannini','123','1996-01-01 00:00:00','Male','Female','https://i.imgur.com/EzJYKAL.png','Hello I\'m Frank and I like to party','2019-11-12 19:27:34','2019-11-12 19:27:34');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
