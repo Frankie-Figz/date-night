@@ -8,7 +8,7 @@ body{
     color: orange;
 }
 
-.orange{
+.orange, #login-validation, .signup-validation, #description{
     color: orange;
 }
 
