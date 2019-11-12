@@ -1,5 +1,5 @@
 
-![Image description](/public/image/logo (3).png)
+![Image description](/public/image/logo.png)
 
 # projectTwo
 Team 2 Project 2
