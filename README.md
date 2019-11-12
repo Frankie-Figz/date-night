@@ -6,7 +6,7 @@ Team 2 Project 2
 Date Night
 
 ### **projectTwo**
-#### *Date Night is an app that surveys users in order to find ideal dates. Survey answers will be stored to a database. Some of the survey questions will tie into Netflix and Chill App in order to offer users movie and food recommendations for their date.*
+#### *Date Night is an app that surveys users in order to find ideal dates. Survey answers will be stored to a database. 
 
 
 ##### Date Night Overview
@@ -15,7 +15,8 @@ Date Night
   * config.json
 * database
   * schema.sql (Database layout)
-  * seeds.sql (Data that goes into the database)
+  * import.sql
+  * magic_view_create.sql
 * public
     * css
       * style.css (Main stylesheet.)
@@ -29,9 +30,16 @@ Date Night
 * package-lock.json
 
 ##### Instructions to Run the App
-* Clone the file from github. (https://github.com/eug703/projectTwo)
-* Install all dependencies needed to run the program ("npm install").
-* Run the applications using node in the command line and open up browser with correct port.
+* Clone the file from github. (https://github.com/Frankie-Figz/date-night.git)
+* In your git bash terminal run 
+  * Do npm install to take care of the package dependency.
+* In the mySQL workbench run :
+  * CREATE DATABASE datanight_db;
+* In your git bash terminal run :
+  * Node server.js
+* In your mySQL workbench run:
+  * The import.sql statement in the workbench.
+  * Run the magic_view_create.sql statement in the workbench.
 
 ##### Technologies Used
 * JavaScript 
@@ -39,8 +47,7 @@ Date Night
 * Bootstrap 
 * Node
 * NPMs: express, express-handlebars, mysql, sequelize, sequelize-cli
-* MySQL
-* Figma
+* MySql
 * Animate.CSS
 
 ######## Demo
