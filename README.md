@@ -1,3 +1,6 @@
+
+![Image description](/public/image/logo (3).png)
+
 # projectTwo
 Team 2 Project 2
 Date Night
@@ -39,3 +42,7 @@ Date Night
 * MySQL
 * Figma
 * Animate.CSS
+
+######## Demo
+
+https://protected-shelf-50360.herokuapp.com/
