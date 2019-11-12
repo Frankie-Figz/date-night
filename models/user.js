@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataType){
             autoIncrement: true,
             primaryKey: true
         },
-        username: {
+        username:{
             type: DataType.STRING,
             unique: true,
             allowNull: false
@@ -15,11 +15,11 @@ module.exports = function(sequelize, DataType){
             type: DataType.STRING,
             allowNull: false
         },
-        last_name: {
+        last_name:{
             type: DataType.STRING,
             allowNull: false
         },
-        password: {
+        password:{
             type: DataType.STRING,
             validate:{
                 len:{
@@ -28,7 +28,19 @@ module.exports = function(sequelize, DataType){
                 }
             }
         },
-        birthday: DataType.DATE
+        birthday: DataType.DATE,
+        gender:{
+            type: DataType.ENUM('Male', 'Female')
+        },
+        gender_preference:{
+            type: DataType.ENUM('Male', 'Female')
+        },
+        img_url:{
+            type: DataType.STRING
+        },
+        bio:{
+            type: DataType.TEXT
+        }
     });
 
     User.associate = function(models){
@@ -37,18 +49,3 @@ module.exports = function(sequelize, DataType){
 
     return User;
 };
-
-// validate: {
-//     is:{
-//         args: ["^[a-z]+$",'i'],
-//         msg: "Must be only letters"
-//     }
-// }
-
-// ,
-// validate: {
-//     is:{
-//         args: ["^[a-z]+$",'i'],
-//         msg: "Must be only numbers"
-//     }
-// }
