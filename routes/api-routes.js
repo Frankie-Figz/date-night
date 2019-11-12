@@ -87,17 +87,22 @@ app.get("/api/surveyanswers/:userId", function(req,res){
 });
 
 // Route for getting matching algorithm
-app.get("/api/matches/:userId", function(req,res){    
-    var connection = mysql.createConnection({
-        host: "localhost",
-        // Your port; if not 3306
-        port: 3306,
-        // Your username
-        user: "root",
-        // Your password
-        password: "root1234",
-        database: "datenight_db"
-    });
+app.get("/api/matches/:userId", function(req,res){
+
+    if(process.env.JAWSDB_URL){
+        var connection = mysql.createConnection(process.env.JAWSDB_URL);
+        } else {
+        var connection = mysql.createConnection({
+            host: "localhost",
+            // Your port; if not 3306
+            port: 3306,
+            // Your username
+            user: "root",
+            // Your password
+            password: "root1234",
+            database: "datenight_db"
+        });
+    };
             
     connection.connect(function(err) {
         // if (err) throw err;
