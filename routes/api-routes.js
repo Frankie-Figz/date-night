@@ -92,7 +92,7 @@ app.get("/api/matches/:userId", function(req,res){
         // Your username
         user: "root",
         // Your password
-        password: "root",
+        password: "gwcoding",
         database: "datenight_db"
     });
             
