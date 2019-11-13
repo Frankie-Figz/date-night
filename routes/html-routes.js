@@ -1,6 +1,10 @@
 var db = require("../models");
 
 module.exports = function(app) {
+    app.get("/", function(req, res){
+        res.render('/')
+    });
+
     app.get("/signup", function(req, res){
         res.render('signup')
     });
