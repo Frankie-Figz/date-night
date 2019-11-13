@@ -87,11 +87,11 @@ app.get("/api/surveyanswers/:userId", function(req,res){
 });
 
 // Route for getting matching algorithm
-app.get("/api/matches/:userId", function(req,res){
+app.get("/api/matches/:userId", function(req,res){   
 
     if(process.env.JAWSDB_URL){
         var connection = mysql.createConnection(process.env.JAWSDB_URL);
-        } else {
+      } else {
         var connection = mysql.createConnection({
             host: "localhost",
             // Your port; if not 3306
@@ -99,7 +99,7 @@ app.get("/api/matches/:userId", function(req,res){
             // Your username
             user: "root",
             // Your password
-            password: "root1234",
+            password: "root",
             database: "datenight_db"
         });
     };
