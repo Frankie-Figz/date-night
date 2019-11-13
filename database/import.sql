@@ -1,18 +1,18 @@
-USE datenight_db;
+USE `tagqru3ldgwm4rti`;
 
-ALTER TABLE `datenight_db`.`survey_answers` 
+ALTER TABLE ``tagqru3ldgwm4rti``.`survey_answers` 
 CHANGE COLUMN `createdAt` `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
 CHANGE COLUMN `updatedAt` `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
 
-ALTER TABLE `datenight_db`.`survey_questions` 
+ALTER TABLE ``tagqru3ldgwm4rti``.`survey_questions` 
 CHANGE COLUMN `createdAt` `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
 CHANGE COLUMN `updatedAt` `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
 
-ALTER TABLE `datenight_db`.`users` 
+ALTER TABLE ``tagqru3ldgwm4rti``.`users` 
 CHANGE COLUMN `createdAt` `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
 CHANGE COLUMN `updatedAt` `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
 
-ALTER TABLE `datenight_db`.`surveys` 
+ALTER TABLE ``tagqru3ldgwm4rti``.`surveys` 
 CHANGE COLUMN `createdAt` `createdAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ,
 CHANGE COLUMN `updatedAt` `updatedAt` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ;
 
