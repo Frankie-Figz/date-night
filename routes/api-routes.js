@@ -99,7 +99,7 @@ app.get("/api/matches/:userId", function(req,res){
             // Your username
             user: "root",
             // Your password
-            password: "root",
+            password: "root1234",
             database: "datenight_db"
         });
     };
@@ -120,5 +120,6 @@ app.get("/api/matches/:userId", function(req,res){
         connection.end();
         });
 });
+
 
 };
